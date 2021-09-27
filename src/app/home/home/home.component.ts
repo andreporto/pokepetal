@@ -17,7 +17,6 @@ export class HomeComponent implements OnInit{
     private pokepetalService: PokepetalService) { }
 
   ngOnInit(): void {
-    // this.pokepetalData = this.pokepetalService.pokemons;
     this.initPokemons();
   }
 
@@ -43,8 +42,8 @@ export class HomeComponent implements OnInit{
     });
   }
 
-  setPokedexMode(e: boolean) {
-    this.setPokemons(e);
+  setPokedexMode(ev: boolean) {
+    this.setPokemons(ev);
   }
 
   setPokemons(isPokedex: boolean) {

@@ -4,7 +4,7 @@
             {{pokemon.name}}
         </div>
         <div class="picture">
-            <img [src]="pokemon.image" alt="">
+            <img [src]="pokemon.image" [alt]="pokemon.name">
         </div>
         <div class="power" *ngFor="let power of pokemon.abilities">
             {{power.ability.name}}

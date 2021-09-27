@@ -1,0 +1,8 @@
+<div class="header">
+    <h1 class="title">Pokedex - PetalMD</h1>
+    <div class="separator"> </div>
+    <div class="menu">
+        <button [ngClass]="{'active': isPokedex}" (click)="setMode(true)">Pokedex</button>
+        <button [ngClass]="{'active': !isPokedex}" (click)="setMode(false)">PokePetal</button>
+    </div>
+</div>

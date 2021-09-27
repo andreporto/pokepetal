@@ -1,0 +1,16 @@
+<div class="card-list" *ngIf="pokemons.length > 0; else noData">
+    <div class="card" *ngFor="let pokemon of pokemons">
+        <div class="title">
+            {{pokemon.name}}
+        </div>
+        <div class="picture">
+            <img [src]="pokemon.image" alt="">
+        </div>
+        <div class="power" *ngFor="let power of pokemon.abilities">
+            {{power.ability.name}}
+        </div>
+
+    </div>
+</div>
+<hr>
+<ng-template #noData>No data</ng-template>

@@ -1,0 +1,37 @@
+@import '../../../colors.scss';
+.header {
+
+    min-width: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .separator {
+        min-height: 2px;
+        min-width: 100%;
+        background-color: white;
+    }
+
+    .title {
+        margin-bottom: 2rem;
+    }
+
+    .menu {
+        margin-top: 2rem;
+        button {
+            padding: 8px 12px;
+            border-radius: 4px;
+            margin-right: 2rem;
+            background-color: $color-bg;
+            border: 1px solid white;
+            color: white;
+            cursor: grab;
+            &.active {
+                cursor: not-allowed;
+                background-color: white;
+                color: $color-bg;
+            }
+        } 
+    }
+}

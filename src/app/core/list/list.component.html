@@ -1,5 +1,5 @@
 <div class="card-list" *ngIf="pokemons.length > 0; else noData">
-    <div class="card" *ngFor="let pokemon of pokemons">
+    <div class="card" *ngFor="let pokemon of pokemons" (click)="openDialog(pokemon)">
         <div class="title">
             {{pokemon.name}}
         </div>

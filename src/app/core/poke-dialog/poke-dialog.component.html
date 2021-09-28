@@ -1,0 +1,18 @@
+<div class="poke-dialog">
+    <h1 mat-dialog-title>{{data.name}}</h1>
+    <div mat-dialog-content>
+        <img src="{{data.image}}" alt="">
+        <div CLASS="type">
+            <span>Type:</span>
+            <ul>
+                <li *ngFor="let t of data.types"> {{t.type.name}}</li>
+            </ul>
+        </div>
+        <div class="ability" *ngIf="data.abilities">
+            <span>Ability:</span>
+            <ul>
+                <li  *ngFor="let ability of data.abilities">{{ability.ability.name}}</li>
+            </ul>
+        </div>
+    </div>
+</div>

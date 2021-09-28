@@ -9,72 +9,81 @@ export class PokepetalService {
   pokemons: PokeData[] = [
     {
         name: 'Patrice Gilbert',
-        abilities:[{ ability:{ name: 'President'}}],
-        image: 'assets/petal/pgilbert-500x600.jpg'
+        types:[{ type:{ name: 'President', url:''}, slot: 1}],
+        image: 'assets/petal/pgilbert-500x600.jpg',
+        abilities: undefined
     },    
     {
         name: 'Pascal Tessier-Fleury',
-        abilities:[{ ability:{ name: 'General Manager'}}],
-        image: 'assets/petal/pfleury-500x600.jpg'
+        types:[{ type:{ name: 'General Manager', url:''}, slot: 1}],
+        image: 'assets/petal/pfleury-500x600.jpg',
+        abilities: undefined
     },    
     {
         name: 'Julie Bergeron',
-        abilities:[{ ability:{ name: 'SVP Strategy, Partnerships and Market Access'}}],
-        image: 'assets/petal/jbergeron-500x600.jpg'
+        types:[{ type:{ name: 'SVP Strategy, Partnerships and Market Access', url:''}, slot: 1}],
+        image: 'assets/petal/jbergeron-500x600.jpg',
+        abilities: undefined
     },    
     {
         name: 'Arvind Dhillon',
-        abilities:[{ ability:{ name: 'VP Product'}}],
-        image: 'assets/petal/adhillon-500x600.jpg'
+        types:[{ type:{ name: 'VP Product', url:''}, slot: 1}],
+        image: 'assets/petal/adhillon-500x600.jpg',
+        abilities: undefined
     },
     {
         name: 'Cyrille Mertes',
-        abilities:[{ ability:{ name: 'VP Technology'}}],
-        image: 'assets/petal/cmertes-500x600.jpg'
+        types:[{ type:{ name: 'VP Technology', url:''}, slot: 1}],
+        image: 'assets/petal/cmertes-500x600.jpg',
+        abilities: undefined
     },
     {
         name: 'Dominique Vallée',
-        abilities:[{ ability:{ name: 'VP Customer Success'}}],
-        image: 'assets/petal/dvallee-500x600.jpg'
+        types:[{ type:{ name: 'VP Customer Success', url:''}, slot: 1}],
+        image: 'assets/petal/dvallee-500x600.jpg',
+        abilities: undefined
     },
     {
         name: 'Corina Chartrand',
-        abilities:[{ ability:{ name: 'VP Human Resources'}}],
-        image: 'assets/petal/cchartrand-500x600.jpg'
+        types:[{ type:{ name: 'VP Human Resources', url:''}, slot: 1}],
+        image: 'assets/petal/cchartrand-500x600.jpg',
+        abilities: undefined
     },
     {
         name: 'Gilbert Boucher',
-        abilities:[{ ability:{ name: 'VP Sales'}}],
-        image: 'assets/petal/gboucher-500x600.jpg'
+        types:[{ type:{ name: 'VP Sales', url:''}, slot: 1}],
+        image: 'assets/petal/gboucher-500x600.jpg',
+        abilities: undefined
     },
     {
         name: 'Jasmin Mulalic',
-        abilities:[{ ability:{ name: 'VP Business Development - Europe'}}],
-        image: 'assets/petal/jmulalic-500x600.jpg'
+        types:[{ type:{ name: 'VP Business Development - Europe', url:''}, slot: 1}],
+        image: 'assets/petal/jmulalic-500x600.jpg',
+        abilities: undefined
     },
     {
         name: 'Natalie Doré',
-        abilities:[{ ability:{ name: 'VP Medical Billing'}}],
-        image: 'assets/petal/ndore-500x600.jpg'
+        types:[{ type:{ name: 'VP Medical Billing', url:''}, slot: 1}],
+        image: 'assets/petal/ndore-500x600.jpg',
+        abilities: undefined
     },
     {
         name: 'Amélie St-Jean',
-        abilities:[{ ability:{ name: 'VP Healthcare Solutions Strategy'}}],
-        image: 'assets/petal/astjean-500x600.jpg'
+        types:[{ type:{ name: 'VP Healthcare Solutions Strategy', url:''}, slot: 1}],
+        image: 'assets/petal/astjean-500x600.jpg',
+        abilities: undefined
     },
     {
         name: 'Mylène Hardy',
-        abilities:[{ ability:{ name: 'Director of Legal Affairs'}}],
-        image: 'assets/petal/mhardy-500x600.jpg'
+        types:[{ type:{ name: 'Director of Legal Affairs', url:''}, slot: 1}],
+        image: 'assets/petal/mhardy-500x600.jpg',
+        abilities: undefined
     },
     {
         name: 'Sylvain Collard',
-        abilities:[
-            { 
-                ability:{ name: 'VP Finances'}
-            }
-        ],
-        image: 'assets/petal/Sylvain_500x600-500x600.jpg'
+        types:[{ type:{ name: 'VP Finances', url: ''}, slot:1}],
+        image: 'assets/petal/Sylvain_500x600-500x600.jpg',
+        abilities: undefined
     }
 ];
 }

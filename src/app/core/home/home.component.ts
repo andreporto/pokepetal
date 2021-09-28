@@ -11,6 +11,8 @@ import { PokepetalService } from 'src/app/services/pokepetal.service';
 export class HomeComponent implements OnInit{
 
   pokemons: PokeData[] = [];
+  isPokedex = true;
+  page = { pageIndex: 0, pageSize: 150}
 
   constructor(
     private pokedexService: PokedexService,
@@ -21,7 +23,7 @@ export class HomeComponent implements OnInit{
   }
 
   initPokemons() {
-    this.pokedexService.pokemons$.toPromise().then(
+    this.pokedexService.getPokemons(this.page).toPromise().then(
       resultPokemons => {
         this.getData(resultPokemons);
       }
@@ -30,6 +32,10 @@ export class HomeComponent implements OnInit{
 
   initPetal() {
     this.pokemons = [...this.pokepetalService.pokemons];
+  }
+
+  get numPokemons() {
+    return this.pokedexService.numPokemons;
   }
 
   getData( pokemonsPokedex: Pokemon[] = []) {
@@ -47,12 +53,20 @@ export class HomeComponent implements OnInit{
   }
 
   setPokemons(isPokedex: boolean) {
+    this.pokemons = [];
     if(isPokedex){
+      this.page.pageIndex = 0;
       this.initPokemons();
     } else {
       this.initPetal();
-      
     }
+    this.isPokedex = isPokedex;
+  }
+
+  onPageChange(e: any){
+    console.log('page changed', e);
+    this.page = e;
+    this.initPokemons();
   }
 
 }

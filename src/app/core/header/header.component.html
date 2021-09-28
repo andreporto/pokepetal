@@ -4,5 +4,6 @@
     <div class="menu">
         <button [ngClass]="{'active': isPokedex}" (click)="setMode(true)">Pokedex</button>
         <button [ngClass]="{'active': !isPokedex}" (click)="setMode(false)">PokePetal</button>
+        <app-paginator *ngIf="isPokedex" [length]="numPokemons" (pageChange)="onPageChange($event)"></app-paginator>
     </div>
 </div>

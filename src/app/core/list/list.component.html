@@ -6,11 +6,15 @@
         <div class="picture">
             <img [src]="pokemon.image" [alt]="pokemon.name">
         </div>
-        <div class="power" *ngFor="let power of pokemon.abilities">
-            {{power.ability.name}}
+        <div class="power" *ngFor="let t of pokemon.types">
+            {{t.type.name}}
         </div>
 
     </div>
 </div>
 <hr>
-<ng-template #noData>No data</ng-template>
+<ng-template #noData>
+    <div class="connecting">
+        Connecting to the server...
+    </div>
+</ng-template>

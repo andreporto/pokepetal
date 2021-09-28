@@ -9,16 +9,26 @@ import { ɵangular_packages_platform_browser_platform_browser_n } from '@angular
   providedIn: 'root'
 })
 export class PokedexService {
+
+  numPokemons = 0;
+
   getPokemonData(pokemon: Pokemon) {
     return this.httpClient.get<PokemonSprites>(pokemon.url).pipe(
-      map( res => ({name: pokemon.name ,image: res.sprites.front_default, abilities: res.abilities}))
+      map( res => ({name: pokemon.name ,image: res.sprites.front_default, abilities: res.abilities, types: res.types}))
     );
   }
 
   constructor(private httpClient: HttpClient) { }    
 
-  pokemons$ = this.httpClient.get<PokemonReult>('https://pokeapi.co/api/v2/pokemon?limit=151').pipe(
-    pluck('results')
-  );
+  getPokemons(page: any) {
+    const url = `https://pokeapi.co/api/v2/pokemon?limit=${page.pageSize}&offset=${page.pageIndex * page.pageSize}`;
+    return this.httpClient.get<PokemonReult>(url).pipe(
+      tap(result => {
+        console.log('PRIMEIRO RESULTADO', result);
+        this.numPokemons = result.count;
+      }),
+      pluck('results')
+    );
+  }
 
 }

@@ -1,0 +1,10 @@
+@import '../../../colors.scss';
+
+.paginator {
+    display: flex;
+    justify-content: center;
+    mat-paginator {
+        border-radius: 4px;
+        color: $color-bg;
+    }
+}

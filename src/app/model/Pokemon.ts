@@ -1,3 +1,5 @@
+import { Type } from "@angular/core";
+
 export interface PokemonReult {
     count: number;
     next: string;
@@ -18,7 +20,8 @@ export interface PokemonSprites {
     }];
     sprites: {
         front_default: string
-    }
+    };
+    types: Types[]
 }
 
 export enum PokeMode {
@@ -28,10 +31,19 @@ export enum PokeMode {
 
 export interface PokeData {
     name: string;
-    abilities: [{ 
+    abilities?: [{ 
         ability: {
             name: string
         }
     }];
+    types: Types[];
     image: string;
+}
+
+export interface Types {
+    slot: number;
+    type: {
+        name: string;
+        url?: string;
+    };
 }

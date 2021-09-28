@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { switchMap } from 'rxjs/operators';
 import { PokeMode } from 'src/app/model/Pokemon';
 
@@ -9,7 +9,9 @@ import { PokeMode } from 'src/app/model/Pokemon';
 })
 export class HeaderComponent {
 
+  @Input() numPokemons = 0;
   @Output() modeChange = new EventEmitter();
+  @Output() pageChange = new EventEmitter();
 
   isPokedex = true;
 
@@ -20,6 +22,10 @@ export class HeaderComponent {
       this.isPokedex = newMode;
       this.modeChange.emit(newMode);
     }
+  }
+
+  onPageChange(e: any){
+    this.pageChange.emit(e);
   }
 
 }

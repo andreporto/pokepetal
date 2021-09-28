@@ -43,7 +43,8 @@ export class HomeComponent implements OnInit{
     pokemonsPokedex.forEach(async element => {
       await this.pokedexService.getPokemonData(element).toPromise().then(
         result => {
-          this.pokemons.push(result)}
+          this.pokemons.push(result);
+        }
       );
     });
   }

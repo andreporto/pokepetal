@@ -11,22 +11,12 @@ import { PokeDialogComponent } from '../poke-dialog/poke-dialog.component';
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.scss']
 })
-export class ListComponent {
+export class ListComponent{
 
   @Input() pokemons:PokeData[] = [];
 
   public constructor(public dialog: MatDialog) {}
   
-  ngOnChanges() {
-    console.log('list', this.pokemons);
-    
-  }
-
-  ngOnInit() {
-    console.log(this.pokemons);
-    
-  }
-
   openDialog(pokemon: PokeData) {
     this.dialog.open(PokeDialogComponent, {data:pokemon});
   }

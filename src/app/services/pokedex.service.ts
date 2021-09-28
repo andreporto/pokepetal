@@ -24,7 +24,6 @@ export class PokedexService {
     const url = `https://pokeapi.co/api/v2/pokemon?limit=${page.pageSize}&offset=${page.pageIndex * page.pageSize}`;
     return this.httpClient.get<PokemonReult>(url).pipe(
       tap(result => {
-        console.log('PRIMEIRO RESULTADO', result);
         this.numPokemons = result.count;
       }),
       pluck('results')
